@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="静屿咖啡馆：在城市旧街区，留一段安静喝咖啡的时间。" />
+  <title>静屿咖啡馆｜慢下来，喝一杯好咖啡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-scene="day">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首页"><span>静屿</span><small>COFFEE</small></a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#menu">本周豆单</a>
+      <a href="#space">咖啡空间</a>
+      <a href="#craft">手作环境</a>
+    </nav>
+    <div class="header-actions">
+      <button class="scene-toggle" type="button" aria-pressed="false" aria-label="切换至傍晚场景">
+        <span class="scene-icon" aria-hidden="true">☼</span><span class="scene-label">进入傍晚</span>
+      </button>
+      <a class="button button-primary" href="#visit">查看路线</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="咖啡馆介绍">
+      <div class="scene-copy day-copy">
+        <p class="eyebrow">JINGYU COFFEE · SHANGHAI</p>
+        <p class="lead">藏在安远路旧街区的自烘焙咖啡馆。<br />白天有自然光，也有一把安静的椅子。</p>
+        <p class="scene-note">日间推荐：靠窗座位 · 轻烘焙 · 阅读与独处</p>
+      </div>
+      <div class="scene-copy night-copy" aria-hidden="true">
+        <p class="eyebrow">JINGYU COFFEE · DUSK</p>
+        <p class="lead">傍晚六点后，手冲吧台亮起暖灯。<br />一杯咖啡，配一份当天现做的甜点。</p>
+        <p class="scene-note">夜晚推荐：手冲单品 · 巴斯克蛋糕 · 吧台小坐</p>
+      </div>
+      <div class="hero-visual" role="img" aria-label="静屿咖啡馆场景示意">
+        <img class="hero-photo hero-day-photo" src="assets/hero-day.png" alt="从落地玻璃向内看静屿咖啡馆的白天空间" />
+        <img class="hero-photo hero-night-photo" src="assets/hero-night.png" alt="暖灯下从落地玻璃向内看静屿咖啡馆的夜晚空间" />
+        <p class="visual-caption day-caption">窗边自然光与手冲咖啡</p>
+        <p class="visual-caption night-caption">傍晚暖灯、手冲与甜点</p>
+      </div>
+    </section>
+
+    <section class="section craft-section" id="craft">
+      <div class="craft-intro">
+        <div>
+          <p class="eyebrow">A PLACE TO UNWIND</p>
+          <h2>不是匆匆喝完一杯，<br />而是放心坐下来。</h2>
+          <p>我们留下一张柔软的皮沙发、窗边的光和不被打扰的距离。无论白天还是傍晚，都可以慢慢坐一会儿。</p>
+        </div>
+        <div class="craft-scene" role="img" aria-label="静屿咖啡馆的白天与夜晚休憩空间">
+          <img class="craft-photo craft-day-photo" src="assets/cafe-day.png" alt="午后阳光照进落地玻璃窗的咖啡馆皮沙发空间" />
+          <img class="craft-photo craft-night-photo" src="assets/cafe-night.png" alt="暖灯下安静舒适的咖啡馆皮沙发空间" />
+          <p class="craft-caption craft-day-caption">午后自然光，留给慢慢坐下来的人</p>
+          <p class="craft-caption craft-night-caption">暖灯亮起后，一杯手冲配一份甜点</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <article class="info-card"><img class="card-photo" src="assets/origin-beans.png" alt="窗边的精品咖啡豆与咖啡花" /><div class="card-copy"><span></span><h3>精选产地</h3><p>每一季挑选风味清晰、可追溯的单一产区咖啡豆。</p></div></article>
+        <article class="info-card"><img class="card-photo" src="assets/brew-bar.png" alt="手冲器具与意式咖啡机并列在吧台上" /><div class="card-copy"><span></span><h3>手冲节奏</h3><p>用合适的水温与节奏，让一支豆子的风味慢慢展开。</p></div></article>
+        <article class="info-card"><img class="card-photo" src="assets/lounge-chair.png" alt="靠窗的焦糖棕单人软皮沙发" /><div class="card-copy"><span></span><h3>柔软座位</h3><p>靠窗的皮沙发与安静的距离，始终为你保留。</p></div></article>
+      </div>
+    </section>
+
+    <section class="section beans" id="menu">
+      <p class="eyebrow">THIS WEEK'S BEANS</p>
+      <h2>本周豆单</h2>
+      <div class="card-grid">
+        <article class="bean-card"><img class="bean-photo" src="assets/bean-yirgacheffe.png" alt="耶加雪菲咖啡与浅烘焙咖啡豆" /><div class="bean-copy"><b>明亮花香</b><h3>耶加雪菲</h3><p>柑橘、茉莉、蜂蜜</p><strong>¥32</strong></div></article>
+        <article class="bean-card"><img class="bean-photo" src="assets/bean-colombia.png" alt="哥伦比亚咖啡与中烘焙咖啡豆" /><div class="bean-copy"><b>温润坚果</b><h3>哥伦比亚</h3><p>可可、坚果、焦糖</p><strong>¥30</strong></div></article>
+        <article class="bean-card"><img class="bean-photo" src="assets/bean-guatemala.png" alt="危地马拉咖啡与深烘焙咖啡豆" /><div class="bean-copy"><b>平衡莓果</b><h3>危地马拉</h3><p>红糖、莓果</p><strong>¥34</strong></div></article>
+      </div>
+    </section>
+
+    <section class="section space" id="space">
+      <div class="space-visual" role="img" aria-label="靠近书架的安静阅读座位"><img src="assets/space-reading.png" alt="咖啡馆窗边的单人皮椅、书架和阅读角落" /></div>
+      <div><p class="eyebrow">A QUIET CORNER</p><h2>靠窗坐一会儿，<br />让时间慢一点。</h2><p>读几页书、写一封信，或与朋友安静聊天。这里不催促你，也不催促一杯咖啡。</p></div>
+    </section>
+
+    <section class="section visit" id="visit">
+      <div><p class="eyebrow">VISIT US</p><h2>来坐坐，喝一杯。</h2><p>上海市静安区南京西路 1686 号<br />静安寺附近（练习定位）<br /><br />周一至周五 08:00–20:00<br />周末 09:00–21:00<br /><br />2 / 7 号线静安寺站，步行约2分钟<br />021-5550-0826</p><a class="button button-light" href="https://www.openstreetmap.org/?mlat=31.2251&mlon=121.4408#map=17/31.2251/121.4408" target="_blank" rel="noreferrer">在地图中打开路线</a></div>
+      <div class="map map-live" aria-label="静安寺附近的可缩放互动地图"><iframe title="静安寺附近互动地图" src="https://www.openstreetmap.org/export/embed.html?bbox=121.435%2C31.220%2C121.446%2C31.230&amp;layer=mapnik&amp;marker=31.2251%2C121.4408" loading="lazy"></iframe></div>
+    </section>
+  </main>
+  <footer>静屿咖啡馆 · 上海静安</footer>
+  <script src="script.js"></script>
+</body>
+</html>

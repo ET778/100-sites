@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>匠履 Jiang Lü | 手工定制皮鞋</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&amp;family=Noto+Sans+SC:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#60603d",
+                "outline": "#80756d",
+                "surface-container-highest": "#e9e1de",
+                "surface-container-high": "#efe6e4",
+                "primary-fixed": "#fbddc6",
+                "tertiary-container": "#aead84",
+                "on-primary-fixed": "#27180a",
+                "primary": "#342314",
+                "on-tertiary-container": "#414121",
+                "surface-container": "#f4ece9",
+                "tertiary-fixed": "#e7e5b8",
+                "surface-dim": "#e0d8d6",
+                "on-tertiary-fixed": "#1d1d02",
+                "surface": "#fff8f6",
+                "primary-container": "#4b3928",
+                "inverse-on-surface": "#f7efec",
+                "secondary-fixed": "#efe0d5",
+                "on-primary-container": "#bda28d",
+                "secondary": "#675c54",
+                "surface-tint": "#705a48",
+                "surface-bright": "#fff8f6",
+                "background": "#fff8f6",
+                "secondary-container": "#efe0d5",
+                "on-background": "#1e1b19",
+                "on-secondary": "#ffffff",
+                "surface-variant": "#e9e1de",
+                "on-secondary-container": "#6d625a",
+                "tertiary-fixed-dim": "#cac99e",
+                "on-primary-fixed-variant": "#574332",
+                "on-surface-variant": "#4e453e",
+                "on-secondary-fixed-variant": "#4f453d",
+                "on-error-container": "#93000a",
+                "surface-container-low": "#faf2ef",
+                "inverse-surface": "#33302e",
+                "on-tertiary-fixed-variant": "#484827",
+                "on-surface": "#1e1b19",
+                "secondary-fixed-dim": "#d2c4ba",
+                "on-tertiary": "#ffffff",
+                "outline-variant": "#d1c4bb",
+                "error-container": "#ffdad6",
+                "on-secondary-fixed": "#211a14",
+                "on-error": "#ffffff",
+                "on-primary": "#ffffff",
+                "error": "#ba1a1a",
+                "inverse-primary": "#dec1ab",
+                "primary-fixed-dim": "#dec1ab"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "max-width": "1200px",
+                "gutter": "24px",
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "unit": "8px"
+        },
+        "fontFamily": {
+                "label-sm": [
+                        "Noto Sans"
+                ],
+                "body-md": [
+                        "Noto Sans"
+                ],
+                "headline-md": [
+                        "Noto Serif"
+                ],
+                "display-lg-mobile": [
+                        "Noto Serif"
+                ],
+                "display-lg": [
+                        "Noto Serif"
+                ],
+                "body-lg": [
+                        "Noto Sans"
+                ]
+        },
+        "fontSize": {
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.8",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #fdf9f0;
+            color: #1c1c16;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px rgba(44, 38, 33, 0.05);
+        }
+        /* The exported hero applies a canvas blur. Keep its contrast overlay, but let the replacement image remain crisp. */
+        .backdrop-blur-\\[2px\\] {
+            backdrop-filter: none !important;
+            background-color: rgba(0, 0, 0, 0.28) !important;
+        }
+        @media (min-width: 768px) {
+            #process > div > .relative > .relative + .relative { margin-top: 5rem !important; }
+            #process .relative.flex { column-gap: 3rem !important; }
+        }
+        .appointment-qr,
+        .appointment-qr * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+        }
+        .appointment-qr .qr-image {
+            transition: transform 260ms ease;
+            transform-origin: center;
+        }
+        .appointment-qr:hover .qr-image {
+            transform: scale(1.14);
+        }
+        .appointment-qr.qr-expanded .qr-image {
+            transform: scale(1.14);
+        }
+        .product-zoom-trigger {
+            cursor: zoom-in;
+            border: 0;
+            display: block;
+            padding: 0;
+            text-align: left;
+            width: 100%;
+        }
+        .product-zoom-trigger:focus-visible {
+            outline: 2px solid #845237;
+            outline-offset: 4px;
+        }
+        /* Mobile is composed independently from the spacious desktop editorial layout. */
+        @media (max-width: 767px) {
+            main > section:first-child {
+                min-height: 680px !important;
+                padding-top: 4rem !important;
+                padding-bottom: 3rem !important;
+            }
+            main > section:first-child > div:first-child > img {
+                object-position: 66% center;
+                transform: none;
+            }
+            main > section:first-child > div:first-child {
+                background: transparent;
+            }
+            main > section:first-child .space-y-6 {
+                row-gap: 1.25rem !important;
+            }
+            main > section:first-child h1,
+            main > section:first-child h1 + p {
+                transform: translateY(-1.75rem);
+            }
+            main > section:first-child .pt-4 {
+                padding-top: 0.25rem !important;
+            }
+            main > section:first-child .flex.flex-col {
+                position: absolute;
+                left: 1.25rem;
+                right: 1.25rem;
+                bottom: 1.75rem;
+                top: auto !important;
+                width: auto;
+                flex-direction: row !important;
+                justify-content: center;
+                gap: 0.625rem !important;
+                align-items: center;
+                transform: none;
+            }
+            main > section:first-child .flex.flex-col > a {
+                width: calc((100% - 0.625rem) / 2);
+                min-height: 2.5rem !important;
+                padding: 0.55rem 0.35rem !important;
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
+            /* Anchor the mobile actions to the full hero, never to the text stack. */
+            main > section:first-child > div.relative.z-10,
+            main > section:first-child > div.relative.z-10 > div.space-y-6 {
+                position: static !important;
+            }
+            main > section:first-child h1,
+            main > section:first-child h1 + p {
+                position: relative;
+                z-index: 1;
+            }
+            #process,
+            #styles,
+            #craft,
+            #appointment {
+                padding-top: 3.5rem !important;
+                padding-bottom: 3.5rem !important;
+            }
+            #process .text-center.mb-12 {
+                margin-bottom: 2rem !important;
+            }
+            #process .relative.space-y-16 > .relative + .relative {
+                margin-top: 2.75rem !important;
+            }
+            #process .relative.flex {
+                gap: 1rem !important;
+            }
+            #process .aspect-\[4\/5\] {
+                max-width: 22rem;
+                margin-inline: auto;
+            }
+            #styles .grid {
+                gap: 2.5rem !important;
+            }
+            #styles .group {
+                max-width: 22rem;
+                margin-inline: auto;
+                width: 100%;
+            }
+            #styles .product-zoom-trigger {
+                margin-bottom: 1rem !important;
+            }
+            #craft h2 {
+                margin-bottom: 2rem !important;
+                padding-bottom: 1.25rem !important;
+            }
+            #craft .space-y-16 > * + * {
+                margin-top: 3rem !important;
+            }
+            #craft .flex.flex-col {
+                gap: 1.25rem !important;
+            }
+            main > section.min-h-\[400px\] {
+                min-height: 0 !important;
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            main > section.min-h-\[400px\] .p-8 {
+                padding: 1.5rem !important;
+            }
+            #appointment > div {
+                gap: 2.5rem !important;
+            }
+            #appointment .space-y-8 {
+                row-gap: 1.5rem !important;
+            }
+            #appointment .appointment-qr {
+                padding: 1.5rem !important;
+            }
+            #appointment .appointment-qr .w-48 {
+                width: 10rem !important;
+                height: 10rem !important;
+            }
+            footer {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+        }
+    </style>
+<style>
+  @media (max-width: 390px) {
+    .header-sublabel {
+      font-size: 7px !important;
+      letter-spacing: 0.05em !important;
+    }
+    header .flex.items-center.gap-1.5 {
+      gap: 0.25rem !important;
+    }
+    header svg {
+      width: 0.65rem !important;
+      height: 0.65rem !important;
+    }
+  }
+</style></head>
+<body class="font-body-md w-full overflow-x-hidden" data-mode="connect">
+<!-- Header (Shared Component: TopNavBar) -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-sm border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center h-16 md:h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<!-- Logo -->
+<a class="flex items-center" href="#" aria-label="匠履首页"><span class="font-display-lg text-2xl md:text-[32px] tracking-[0.18em] leading-none text-primary">匠履</span></a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8 lg:gap-[50px]">
+<a class="font-body-md text-lg lg:text-[25px] text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#process">定制流程</a>
+<a class="font-body-md text-lg lg:text-[25px] text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#styles">鞋款</a>
+<a class="font-body-md text-lg lg:text-[25px] text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#craft">工艺介绍</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<a class="bg-primary-container text-on-primary px-4 md:px-5 py-2 rounded font-body-md hover:opacity-90 active:scale-95 transition-all duration-150 min-h-[40px] flex items-center justify-center" href="#appointment">
+                    预约量脚
+                </a>
+</div>
+</div>
+<!-- Mobile Menu Dropdown -->
+<div class="md:hidden hidden bg-surface border-b border-outline-variant/30 absolute w-full" id="mobile-menu">
+<nav class="flex flex-col py-4 px-margin-mobile gap-4">
+<a class="font-body-md text-on-surface-variant py-2 min-h-[44px] flex items-center" href="#process">定制流程</a>
+<a class="font-body-md text-on-surface-variant py-2 min-h-[44px] flex items-center" href="#styles">鞋款</a>
+<a class="font-body-md text-on-surface-variant py-2 min-h-[44px] flex items-center" href="#craft">工艺介绍</a>
+</nav>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative min-h-[100vh] md:min-h-[921px] flex items-center justify-start pt-20 md:pt-24 pb-20 w-full"><div class="absolute inset-0 z-0"><img alt="手工皮鞋工坊首屏背景" class="w-full h-full object-cover" src="assets/generated/已生成图像 1 (9).png"/><div class="absolute inset-0 bg-black/25"></div></div><div class="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full h-full flex items-center"><div class="space-y-6 md:space-y-8 max-w-xl w-full text-center md:text-left pt-12 md:pt-0"><h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white leading-tight">可丈量的匠心</h1><p class="font-body-lg text-white/90 max-w-md mx-auto md:mx-0">从脚型、步态到日常场景，为你制作一双真正合脚、能够长久穿着的手工皮鞋。</p><div class="flex flex-col sm:flex-row gap-4 pt-4"><a class="bg-secondary text-on-secondary px-8 py-4 rounded font-body-md text-center hover:opacity-95 transition-opacity min-h-[44px] min-w-[44px] flex items-center justify-center" href="#appointment">预约量脚咨询</a><a class="border border-white/50 text-white px-8 py-4 rounded font-body-md text-center hover:bg-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#process">了解定制流程</a></div></div></div></section>
+<!-- Custom Process -->
+<section class="bg-surface py-20 md:py-32 w-full" id="process">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-3xl md:text-headline-md text-primary mb-4">从双脚开始，慢慢完成一双鞋</h2>
+<div class="w-12 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="relative space-y-16 md:space-y-24"><!-- Vertical Connecting Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 -translate-x-1/2 hidden md:block"></div>
+<!-- Step 01 -->
+<div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-20">
+<div class="w-full md:w-1/2 text-center md:text-right space-y-2 md:space-y-4 order-2 md:order-1">
+<span class="font-display-lg text-[48px] md:text-[64px] text-primary/10 leading-none block">01</span>
+<h3 class="font-headline-md text-2xl text-primary">预约沟通</h3>
+<p class="font-body-md text-base text-on-surface-variant max-w-md mx-auto md:ml-auto">深入了解您的穿着习惯与审美偏好，建立专属足部档案。</p>
+</div>
+<div class="w-full md:w-[45%] order-1 md:order-2 relative">
+<div class="aspect-[4/5] overflow-hidden rounded-sm editorial-shadow relative z-0">
+<img alt="预约沟通" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsU0yMlrgnbiKO0Dm2z5dAojuIqHdjipxcchZ2xGFNB0f38LXEGYmBNdhCqpEvehE9J3NELXRC01Zo1aaJodazErPUKFpC430cJKdIssGQwLewk8UKS9hzLfBieRxGOgCfWe8XCsP07vmUMvcWgO9teRWdWW5_neiBq0hxdsxjsyE2Gcy_Q4c5N34r-dOxwF9AEGtoV0w3k_yYiz5iqv9OtQTeU2Miwby1vvkUaqHL7fzL2c1keyTOy0A"/>
+</div>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-20">
+<div class="w-full md:w-[45%] md:ml-auto relative">
+<div class="aspect-[4/5] overflow-hidden rounded-sm editorial-shadow relative z-0">
+<img alt="客户穿黑袜量脚" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="assets/generated/已生成图像 1 (11).png"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 text-center md:text-left space-y-2 md:space-y-4">
+<span class="font-display-lg text-[48px] md:text-[64px] text-primary/10 leading-none block">02</span>
+<h3 class="font-headline-md text-2xl text-primary">量脚选料</h3>
+<p class="font-body-md text-base text-on-surface-variant max-w-md mx-auto md:mx-0">采集多维度足部数据，挑选来自全球顶级皮厂的珍稀皮料。</p>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-20">
+<div class="w-full md:w-1/2 text-center md:text-right space-y-2 md:space-y-4 order-2 md:order-1">
+<span class="font-display-lg text-[48px] md:text-[64px] text-primary/10 leading-none block">03</span>
+<h3 class="font-headline-md text-2xl text-primary">工坊制作</h3>
+<p class="font-body-md text-base text-on-surface-variant max-w-md mx-auto md:ml-auto">历经42道严苛手工工序，由资深匠人耗时百小时雕琢成形。</p>
+</div>
+<div class="w-full md:w-[45%] order-1 md:order-2 relative">
+<div class="aspect-[4/5] overflow-hidden rounded-sm editorial-shadow relative z-0">
+<img alt="工坊制作" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuwBKGh2mtMnyuOaiW-xeYE6jLjSXrudg1D9ZBSASGnG9MZHvIKWnDSnAQNSwF_6xB490Xscf6lkBHC7Mt0iN0Av02UCkanG5Hygbv-okmQSm3fqYzQnL-FL3jAUp5QQDKiI1azrn5-xxAcqHi73hGuLssGfub0_dWcTE1D4yEZVBM5EdGZ7ZKwhGuQgZhh0UPyjRbJf5epZTSQEQ6dKczrlpznj6-OQEMYqy1F9-e4wHpnnaC4FOFukA"/>
+</div>
+</div>
+</div>
+<!-- Step 04 -->
+<div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-20">
+<div class="w-full md:w-[45%] md:ml-auto relative">
+<div class="aspect-[4/5] overflow-hidden rounded-sm editorial-shadow relative z-0">
+<img alt="试穿交付" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLufcLFIJXOsfPSKO7uaaEZMheAfLesjlfF0R5x_FkS1W4y5SVF4Dobhf_20Wk7DlELS1ZtIqgTil6oZ5dGlI1ud2R7s5lyyabd0a2OnYE1gH_einDXpLF6PmfhxzWjLfs-fc33RYMtyD-u9Se-uS0zl_la3QUzHhmbhRzDwkyhQNnruKkXwHG9FeVvFBoEATGgHtHjot8J7OCq8KM3GD0ZZTMCJib_iV0v-SwDit9J_eCeb7KjoXRVnjA"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 text-center md:text-left space-y-2 md:space-y-4">
+<span class="font-display-lg text-[48px] md:text-[64px] text-primary/10 leading-none block">04</span>
+<h3 class="font-headline-md text-2xl text-primary">试穿交付</h3>
+<p class="font-body-md text-base text-on-surface-variant max-w-md mx-auto md:mx-0">根据试穿反馈微调至极致舒适，开启长达数载的优雅陪伴。</p>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Shoe Styles -->
+<section class="py-20 md:py-32 bg-surface-container-low w-full" id="styles">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+<!-- Style 1 -->
+<div class="group">
+<button class="product-zoom-trigger aspect-[4/5] overflow-hidden mb-6 bg-surface-container" type="button" data-lightbox-src="assets/generated/shoe-oxford.png" data-lightbox-alt="黑咖色意大利小牛皮经典牛津鞋">
+<img class="w-full h-full object-contain p-2 group-hover:scale-[1.02] transition-transform duration-700" alt="黑咖色意大利小牛皮经典牛津鞋" src="assets/generated/shoe-oxford.png"/>
+</button>
+<div class="space-y-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-md text-primary">经典牛津</h3>
+<span class="font-body-md text-secondary">¥3,980 起</span>
+</div>
+<p class="font-body-md text-on-surface-variant">正式商务与婚礼</p>
+<div class="pt-2">
+<span class="inline-block px-3 py-1 bg-surface-container-high text-on-tertiary-container font-label-sm rounded-sm">意大利小牛皮</span>
+</div>
+</div>
+</div>
+<!-- Style 2 -->
+<div class="group">
+<button class="product-zoom-trigger aspect-[4/5] overflow-hidden mb-6 bg-surface-container" type="button" data-lightbox-src="assets/generated/shoe-derby.png" data-lightbox-alt="深干邑色法国蜡感牛皮德比鞋">
+<img class="w-full h-full object-contain p-2 group-hover:scale-[1.02] transition-transform duration-700" alt="深干邑色法国蜡感牛皮德比鞋" src="assets/generated/shoe-derby.png"/>
+</button>
+<div class="space-y-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-md text-primary">德比鞋</h3>
+<span class="font-body-md text-secondary">¥3,680 起</span>
+</div>
+<p class="font-body-md text-on-surface-variant">通勤与日常正装</p>
+<div class="pt-2">
+<span class="inline-block px-3 py-1 bg-surface-container-high text-on-tertiary-container font-label-sm rounded-sm">法国蜡感牛皮</span>
+</div>
+</div>
+</div>
+<!-- Style 3 -->
+<div class="group">
+<button class="product-zoom-trigger aspect-[4/5] overflow-hidden mb-6 bg-surface-container" type="button" data-lightbox-src="assets/generated/shoe-loafer.png" data-lightbox-alt="深苔藓绿色西班牙反绒皮乐福鞋">
+<img class="w-full h-full object-contain p-2 group-hover:scale-[1.02] transition-transform duration-700" alt="深苔藓绿色西班牙反绒皮乐福鞋" src="assets/generated/shoe-loafer.png"/>
+</button>
+<div class="space-y-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-md text-primary">乐福鞋</h3>
+<span class="font-body-md text-secondary">¥3,280 起</span>
+</div>
+<p class="font-body-md text-on-surface-variant">商务休闲与周末出行</p>
+<div class="pt-2">
+<span class="inline-block px-3 py-1 bg-surface-container-high text-on-tertiary-container font-label-sm rounded-sm">西班牙反绒皮</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Craftsmanship -->
+<section class="py-20 md:py-24 bg-primary-container text-on-primary overflow-hidden w-full" id="craft">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-display-lg text-3xl md:text-headline-md mb-12 md:mb-24 border-b border-outline/30 pb-6 md:pb-8">看得见的制作过程</h2>
+<div class="space-y-16 md:space-y-32">
+<!-- Row 1 -->
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-[42%] space-y-4 md:space-y-6">
+<span class="font-display-lg text-4xl md:text-display-lg text-outline-variant/30 block">01</span>
+<h3 class="font-headline-md text-2xl md:text-headline-md">选皮</h3>
+<p class="font-body-lg text-on-primary-container leading-relaxed">
+                                我们坚持在全球顶级皮厂中亲手甄选。每一寸皮革都需经过细致检视，确保纹理均匀、柔韧且无瑕。从意大利的满粒面牛皮到法国的蜡感皮，唯有最优质的部分能进入裁断环节。
+                            </p>
+</div>
+<div class="w-full md:w-[58%] aspect-video bg-white/5 overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500" data-alt="A close-up horizontal image of a craftsman's hands carefully feeling and examining a large piece of raw, premium cognac leather. The setting is a dimly lit workshop with warm focus on the leather's grain. The style is moody, professional, and tactile, emphasizing the sensory experience of quality materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9JkVS0OAtBqMz1prMhkBiuO-igkRTKSKZRFC4TUtXHY72pC5oZsm2S01qrf3fEjdSYXcUcs5ZMOUvNxWjL386DmkUNv1goqHwVmAmmQUdZOz7ZDXBqQBlFe7t8xdAWrRu_WpgzxUESNv96YaYUqjyfAJDSneDkrrTHbn9RQPx8qUylAA8JfD1BukglHQpEkWKu1HITgm6XsPJ-Lx0y2esHjCI4ZtI4Ra21g1gt51WAqOv0sl8ZXEsWaOQpnbRWAvDlxGJOAU4sw"/>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
+<div class="w-full md:w-[42%] space-y-4 md:space-y-6">
+<span class="font-display-lg text-4xl md:text-display-lg text-outline-variant/30 block">02</span>
+<h3 class="font-headline-md text-2xl md:text-headline-md">制楦</h3>
+<p class="font-body-lg text-on-primary-container leading-relaxed">
+                                楦头是鞋的灵魂。我们将您的足部数据转化为木质模型，通过精细削切与打磨，在毫米间寻求支撑与空间的平衡，确保每一双鞋都如第二层皮肤般贴合</p>
+</div>
+<div class="w-full md:w-[58%] aspect-video bg-white/5 overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500" data-alt="A master craftsman using a traditional rasp to shape a wooden shoe last. Fine wood shavings are visible in the air and on the workbench. Focused side lighting highlights the sculptural form of the last and the physical effort of the maker. Authentic workshop environment with a deep ink brown and warm ivory color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzLsrsN-FlgPWTIYS7YcR9FmcbC6d2jNwwX7lsYihf-Ytwi95s155nR2Qq9R2Et5szZcawbizp_WaHr9qri6erTd5gBp8xMHDlLrw975jFaXTgHj13eIuh4NiZiR0TwUzVH_KwcEuWJK8ji-hpVut35rHxm5qi1uQfqHTskCGbFen62nCj8VRHYnveNIGa9YsP34sOeSp6Br6SSOseqPlLoPJx5_9XVWuAWlVmAPk_YD3RivAronJBSO-WN4_doH-P_RYTvouqOQ"/>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-[42%] space-y-4 md:space-y-6">
+<span class="font-display-lg text-4xl md:text-display-lg text-outline-variant/30 block">03</span>
+<h3 class="font-headline-md text-2xl md:text-headline-md">手工缝制</h3>
+<p class="font-body-lg text-on-primary-container leading-relaxed">
+                                沿袭传统的固特异缝制工艺（Goodyear Welted）。每一针都需恰到好处的力道，将鞋面、内底与沿条紧密结合。这种结构不仅坚固耐穿，更赋予了鞋履透气与可修复的特性。
+                            </p>
+</div>
+<div class="w-full md:w-[58%] aspect-video bg-white/5 overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500" data-alt="Macro photography of two thick needles being pulled through heavy leather with waxed thread. The focus is extremely sharp on the thread and the clean puncture holes. The craftsman's calloused fingers are partially visible, showing years of experience. The light is warm and dramatic, highlighting the texture of the materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7QFFjYd3DeTrtQ_mLDwsYy2haO5oadFCO_6e3L7LJHIL5UY6WOMcNuQ2LRZZyA86f8priSDjP8fFN64GrhetBFJjDyNGkQzz6U4UxYIMgJxsnYOjYhDWZKRIYCYTYt8NQcMyyxmvc9YrU9qMQnCsuYQNal79-Bj4eb9vNL2hk6dT0ll2xfgRhyX5zA9Z5ISYrTJcaTUG9YuFg0Lqtbw7gWfMkdJK608R809u1UVhPEllA6UdKWlCGabM01Jd_mzNIiBMZlPtXyQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Area -->
+<section class="relative min-h-[400px] md:min-h-[600px] flex items-center md:items-end justify-center md:justify-end py-16 md:py-24 w-full">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide, cinematic wide shot of an artisan's hands working on a beautiful dark leather shoe. The background is a blurred artisan workshop with organized tools and rolls of leather. The atmosphere is serene and timeless. Warm neutral lighting. No faces are shown, only the skillful movement of the hands. Dark ink brown and ivory tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJPxTmoYNnoRVOddhSualhi0Mc3_y8pXKK6Q2VMpljCP9ds69kpRmnhWucGdMzAE1tE4khAGs13pPQMPcf7xWhOFTQYIyf6l4C1EY2hxbFBoDNQQuTxPyGkfdbhiT0z5jP77Km4b4H-Rtu9LEavWFkGk5vcyR104hzBEzp1sZLyiZ4iogYQw8fKTm4l9NMRgsm8j8BYcgTd32isMapzQL8tIwQjOaDRWqXf3bovCyuUjJPCqe_5MmQ-HZLjCO8z-TFEPr1W6xtdg"/>
+<div class="absolute inset-0 bg-black/30 md:bg-black/20"></div>
+</div>
+<div class="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full flex justify-center md:justify-end items-center md:items-end h-full">
+<div class="w-full md:w-[45%] bg-surface/90 md:bg-surface/80 backdrop-blur-sm p-8 md:p-14 space-y-6 md:space-y-8 border border-outline-variant/20 rounded-sm mb-0 md:mb-12 shadow-none">
+<p class="font-display-lg text-2xl md:text-headline-md text-primary italic leading-snug text-center md:text-left">
+                        “一双鞋的价值，不在于被看见，而在于被长久穿着。”
+                    </p>
+<div class="grid grid-cols-1 gap-4 md:gap-6 pt-4 md:pt-6 border-t border-outline-variant/50">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">制鞋经验</span>
+<span class="font-display-lg text-2xl md:text-headline-md text-secondary">18年</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">手工工序</span>
+<span class="font-display-lg text-2xl md:text-headline-md text-secondary">42道</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">免费微调</span>
+<span class="font-display-lg text-2xl md:text-headline-md text-secondary">90天</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Appointment Area -->
+<section class="py-20 md:py-32 w-full" id="appointment">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+<div class="space-y-8 md:space-y-10">
+<h2 class="font-display-lg text-3xl md:text-display-lg leading-tight text-center md:text-left">让双脚，找到适合自己的轮廓</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">location_on</span>
+<p class="font-body-md text-on-surface-variant">上海市徐汇区复兴中路 518 号 2 楼</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">schedule</span>
+<p class="font-body-md text-on-surface-variant">周二至周日 10:30–19:30 (需预约)</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">call</span>
+<p class="font-body-md text-on-surface-variant">021-6438-0916</p>
+</div>
+</div>
+<div class="pt-4 md:pt-6 flex justify-center md:justify-start">
+<button aria-controls="appointment-qr" class="bg-primary-container text-on-primary px-8 md:px-10 py-4 rounded font-body-md hover:opacity-90 transition-all flex items-center justify-center gap-3 w-full md:w-auto min-h-[44px]" id="appointment-cta" type="button">
+<span class="material-symbols-outlined">calendar_today</span>
+                            预约量脚咨询
+                        </button>
+</div>
+</div>
+<div class="appointment-qr bg-surface-container aspect-square rounded-[8px] flex items-center justify-center overflow-hidden p-8 md:p-12 border border-outline-variant/40" id="appointment-qr">
+<div class="text-center space-y-5">
+<div class="w-48 h-48 md:w-56 md:h-56 mx-auto bg-white p-2 rounded-lg editorial-shadow">
+<img class="qr-image w-full h-full object-contain" alt="匠履微信预约二维码" src="assets/wechat-appointment-qr.png"/>
+</div>
+<p class="text-lg font-semibold text-primary">扫码添加微信</p>
+<p class="font-body-md text-on-surface-variant">发送「量脚」预约专属咨询</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div aria-hidden="true" aria-labelledby="product-lightbox-caption" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 p-4 md:p-10" id="product-lightbox" role="dialog" aria-modal="true">
+<button aria-label="关闭大图预览" class="absolute right-4 top-4 md:right-8 md:top-8 w-11 h-11 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors flex items-center justify-center" data-lightbox-close type="button"><span class="material-symbols-outlined">close</span></button>
+<figure class="max-h-full max-w-full flex flex-col items-center gap-3">
+<img alt="" class="max-h-[82vh] max-w-full rounded-sm object-contain shadow-2xl" id="product-lightbox-image"/>
+<figcaption class="font-body-md text-sm text-white/85" id="product-lightbox-caption"></figcaption>
+</figure>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-low border-t border-outline-variant/50 py-16 md:py-20 w-full">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+<div class="space-y-6">
+<div class="flex flex-col items-start leading-none mb-6">
+<span class="font-display-lg text-2xl text-primary tracking-[0.2em] mb-1">匠履</span>
+<div class="flex items-center gap-1.5">
+<svg class="w-3 h-3 text-primary opacity-60" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3 17c0 0 2-1 5-1s5 1 8 1s5-1 5-1v-2c0 0-2 1-5 1s-5-1-8-1s-5 1-5 1v2z"></path>
+<path d="M3 12c0 0 2-1 5-1s5 1 8 1s5-1 5-1V9c0 0-2 1-5 1s-5-1-8-1s-5 1-5 1v3z"></path>
+<path d="M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2"></path>
+</svg>
+<span class="font-label-sm text-[10px] tracking-[0.15em] uppercase text-on-surface-variant opacity-80 whitespace-nowrap">CRAFTSMAN FOOTWEAR</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    匠心造就品质，品质带来信任。<br/>我们致力于传承经典男装皮鞋工艺，<br/>为中国绅士提供舒适且体面的足下之选。
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-sm tracking-widest text-secondary">关于我们</h4>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors min-h-[44px] flex items-center md:min-h-0" href="#">工作室介绍</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors min-h-[44px] flex items-center md:min-h-0" href="#">联系方式</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors min-h-[44px] flex items-center md:min-h-0" href="#">定制须知</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-sm tracking-widest text-secondary">关注我们</h4>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center min-h-[44px] min-w-[44px]" href="#">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>share</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center min-h-[44px] min-w-[44px]" href="#">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>camera</span>
+</a>
+</div>
+<div class="pt-8">
+<p class="font-label-sm text-on-tertiary-container/60 italic">© 2024 匠履. Quality through craftsmanship.</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll transition for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-4', 'editorial-shadow');
+                header.classList.remove('py-0');
+            } else {
+                header.classList.remove('py-4', 'editorial-shadow');
+                header.classList.add('py-0');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Click interaction for steps
+        document.querySelectorAll('.z-10').forEach(step => {
+            step.addEventListener('click', () => {
+                step.classList.add('scale-95');
+                setTimeout(() => step.classList.remove('scale-95'), 150);
+            });
+        });
+
+        const productLightbox = document.getElementById('product-lightbox');
+        const productLightboxImage = document.getElementById('product-lightbox-image');
+        const productLightboxCaption = document.getElementById('product-lightbox-caption');
+        let lastZoomTrigger = null;
+
+        const closeProductLightbox = () => {
+            productLightbox.classList.add('hidden');
+            productLightbox.classList.remove('flex');
+            productLightbox.setAttribute('aria-hidden', 'true');
+            if (lastZoomTrigger) lastZoomTrigger.focus();
+        };
+
+        document.querySelectorAll('.product-zoom-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                lastZoomTrigger = trigger;
+                productLightboxImage.src = trigger.dataset.lightboxSrc;
+                productLightboxImage.alt = trigger.dataset.lightboxAlt;
+                productLightboxCaption.textContent = trigger.dataset.lightboxAlt;
+                productLightbox.classList.remove('hidden');
+                productLightbox.classList.add('flex');
+                productLightbox.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        productLightbox.addEventListener('click', event => {
+            if (event.target === productLightbox || event.target.closest('[data-lightbox-close]')) closeProductLightbox();
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && !productLightbox.classList.contains('hidden')) closeProductLightbox();
+        });
+
+        const appointmentCta = document.getElementById('appointment-cta');
+        const appointmentQr = document.getElementById('appointment-qr');
+        appointmentCta.addEventListener('click', () => {
+            appointmentQr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            appointmentQr.classList.remove('qr-expanded');
+            requestAnimationFrame(() => appointmentQr.classList.add('qr-expanded'));
+            setTimeout(() => appointmentQr.classList.remove('qr-expanded'), 2200);
+        });
+    </script>
+</body></html>
