@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Linye Studio 是杭州独立摄影工作室，提供人像、婚礼纪实和品牌形象摄影服务。" />
+    <title>林野摄影｜人像、婚礼与品牌摄影｜Linye Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Linye Studio，返回顶部"><img src="public/linye-logo-cropped.png" alt="Linye Studio 林野摄影" /></a>
+      <nav class="nav-links" id="site-nav" aria-label="主导航">
+        <a href="#works"><span>作品</span><small>WORKS</small></a><a href="#about"><span>关于我</span><small>ABOUT</small></a><a href="#services"><span>服务</span><small>SERVICES</small></a>
+      </nav>
+      <a class="button button-primary nav-book" href="#booking"><span>预约拍摄</span><small>BOOK NOW</small></a>
+      <button class="menu-button" aria-controls="site-nav" aria-expanded="false">菜单</button>
+    </header>
+
+    <main>
+      <section id="top" class="hero">
+        <img class="hero-image" src="public/exec-e8e45cae-074b-4e83-b269-b811f2885547.png" alt="自然光下的新娘与新郎" />
+        <div class="hero-wash"></div>
+        <div class="hero-copy"><p class="eyebrow">STORIES IN LIGHT</p><h1><span>记录真实而</span><span>有温度的瞬间</span></h1><p>杭州独立摄影工作室，提供人物肖像、婚礼纪实与品牌形象摄影服务。</p><div class="hero-actions"><a class="button button-primary" href="#booking"><span>预约拍摄</span><small>BOOK NOW</small></a><a class="button button-secondary" href="#works"><span>浏览作品</span><small>VIEW WORKS</small></a></div></div>
+      </section>
+
+      <section id="works" class="section works-section"><div class="section-title"><h2>作品集</h2><p>SELECTED WORKS</p></div><div class="filters" aria-label="作品分类"><button class="active" data-filter="全部"><span>全部</span><small>ALL</small></button><button data-filter="人像"><span>人像</span><small>PORTRAIT</small></button><button data-filter="婚礼"><span>婚礼</span><small>WEDDING</small></button><button data-filter="品牌"><span>品牌</span><small>BRAND</small></button></div><div class="work-loading" id="work-loading" hidden aria-live="polite" aria-label="正在加载作品"><span></span><span></span><span></span><p>LOADING SELECTED WORKS</p></div><div class="masonry" id="work-grid"></div><div class="empty-state" id="work-empty" hidden><p>该类别作品正在整理</p><small>NEW STORIES ARE ON THE WAY</small><button class="text-button" id="reset-filter"><span>查看全部作品</span><small>VIEW ALL WORKS</small></button></div></section>
+
+      <section id="about" class="section about-section"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=85" alt="手持相机的摄影师" loading="lazy" /><div><div class="section-title"><h2>关于摄影师</h2><p>ABOUT THE PHOTOGRAPHER</p></div><p class="lead">我是一名常驻杭州的独立摄影师，关注人与环境之间真实而细微的情绪。拍摄中更倾向于自然引导，而不是要求你摆出刻意、复杂的姿势。</p><dl><div><dt>工作室位置</dt><dd>杭州</dd></div><div><dt>服务范围</dt><dd>杭州及周边城市</dd></div></dl></div></section>
+
+      <section id="services" class="section"><div class="section-title"><h2>摄影服务</h2><p>SERVICES</p></div><div class="service-grid"><article class="service-card"><img src="public/service-portrait-editorial.png" alt="人物肖像" loading="lazy" /><div><h3>人物肖像</h3><p>个人写真、情侣照、家庭照与创始人形象照。</p><button class="text-button" data-service="人物肖像"><span>预约拍摄 →</span><small>BOOK PORTRAIT</small></button></div></article><article class="service-card"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=900&q=85" alt="婚礼纪实" loading="lazy" /><div><h3>婚礼纪实</h3><p>婚礼跟拍、领证记录、求婚记录与仪式纪实。</p><button class="text-button" data-service="婚礼纪实"><span>预约拍摄 →</span><small>BOOK WEDDING</small></button></div></article><article class="service-card"><img src="public/service-brand-editorial.png" alt="品牌形象" loading="lazy" /><div><h3>品牌形象</h3><p>品牌宣传、产品拍摄、商业肖像与社交视觉内容。</p><button class="text-button" data-service="品牌形象"><span>预约拍摄 →</span><small>BOOK BRAND</small></button></div></article></div></section>
+
+      <section id="process" class="section process-section reveal"><div class="section-title"><h2>拍摄流程</h2><p>PROCESS</p></div><div class="steps"><article><span>01</span><div><h3>沟通需求</h3><p class="english">COMMUNICATION</p><p>了解拍摄目的、人数、风格偏好、地点与基本需求。</p></div></article><article><span>02</span><div><h3>确认档期</h3><p class="english">CONFIRMATION</p><p>共同确认拍摄日期、地点、服务类型与合作事项。</p></div></article><article><span>03</span><div><h3>拍摄与交付</h3><p class="english">DELIVERY</p><p>完成拍摄、筛选与后期处理，按约定交付成片。</p></div></article></div></section>
+
+      <section id="booking" class="booking"><div class="section-title"><h2>预约拍摄</h2><p>BOOK A SESSION</p></div><p class="booking-intro">填写基本预约信息，我们会尽快与你联系。拍摄日期尚未确定，也可以先提交咨询。</p><form id="booking-form" novalidate><label>姓名 <sup>*</sup><input name="name" required /></label><label>联系方式 <sup>*</sup><input name="contact" placeholder="手机号、微信或邮箱" required /></label><label>拍摄类型 <sup>*</sup><select name="type" required><option value="">请选择拍摄类型</option><option>人物肖像</option><option>婚礼纪实</option><option>品牌形象</option><option>其他</option></select></label><label>期望日期<input name="date" type="date" /><small>尚未确定日期可暂不填写</small></label><label>拍摄城市<input name="city" /></label><label>需求说明<textarea name="notes" placeholder="可以简单描述拍摄用途、人数、风格或其他想法。"></textarea></label><div class="form-bottom"><a href="mailto:hello@linyestudio.cn?subject=摄影预约咨询">预约邮箱：hello@linyestudio.cn</a><button class="button button-primary" type="submit"><span>提交预约</span><small>SUBMIT REQUEST</small></button></div><div class="form-message" id="form-message" aria-live="polite"></div></form></section>
+    </main>
+    <footer><img src="public/linye-logo-cropped.png" alt="Linye Studio 林野摄影" /><p>Hangzhou, China</p><a href="mailto:hello@linyestudio.cn">hello@linyestudio.cn</a><p>© 2026 Linye Studio.</p><a href="#top">返回顶部</a></footer>
+    <dialog id="lightbox"><button class="dialog-close" aria-label="关闭大图">×</button><button class="dialog-nav previous" aria-label="上一张">←</button><figure><img alt="" /><figcaption></figcaption></figure><button class="dialog-nav next" aria-label="下一张">→</button></dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
