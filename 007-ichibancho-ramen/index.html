@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="一番町拉面｜杭州现熬豚骨与鸡白汤拉面，查看今日菜单、营业时间与到店地址。" />
+    <meta property="og:title" content="一番町拉面｜杭州现熬汤底" />
+    <meta property="og:description" content="一碗热汤，刚好抚慰今天。" />
+    <title>一番町拉面｜杭州现熬汤底</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css?v=20260730-10" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand-lockup" href="#top" aria-label="返回一番町拉面首页">
+        <img src="./assets/ichibancho-logo.png" alt="一番町拉面 ICHIBANCHO RAMEN 品牌 Logo" />
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">菜单</button>
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#menu">菜单</a>
+        <a href="#flavor">招牌风味</a>
+        <a href="#story">门店故事</a>
+        <a class="nav-store-link" href="#store">杭州门店</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-dark" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">一碗热汤，<br />刚好抚慰今天。</h1>
+          <div class="status-line" aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="open-status">营业中</span>
+            <span class="status-time">11:00–14:00，17:00–22:30；周一午间休息</span>
+          </div>
+          <a class="button button-primary" href="#menu">查看今日菜单 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-visual" role="img" aria-label="盛有叉烧和溏心蛋的炙烧豚骨拉面"></div>
+      </section>
+
+      <section class="menu-section section-dark" id="menu" aria-labelledby="menu-title">
+        <div class="menu-panel">
+          <div class="section-heading compact-heading"><span class="section-kicker">今日菜单</span><h2 id="menu-title">拉面菜单</h2></div>
+          <div class="category-tabs" role="tablist" aria-label="菜单分类">
+            <button class="category-tab is-active" type="button" role="tab" aria-selected="true" data-category="拉面">拉面</button>
+            <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="小菜">小菜</button>
+            <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="饮品">饮品</button>
+            <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="季节限定">季节限定</button>
+          </div>
+          <div class="menu-list" id="menu-list" aria-live="polite"></div>
+          <button class="menu-more" type="button" id="menu-more">查看完整菜单 <span aria-hidden="true">→</span></button>
+        </div>
+        <aside class="broth-panel" aria-label="四种汤底风味">
+          <div class="broth-column"><span class="broth-mark broth-icon broth-icon-1" aria-hidden="true"></span><h3>豚<br />骨<br />汤</h3><p>浓厚、油脂感明显</p></div>
+          <div class="broth-column"><span class="broth-mark broth-icon broth-icon-2" aria-hidden="true"></span><h3>鸡<br />白<br />汤</h3><p>顺滑、相对温和</p></div>
+          <div class="broth-column"><span class="broth-mark broth-icon broth-icon-3" aria-hidden="true"></span><h3>味<br />噌<br />汤</h3><p>咸香、层次较丰富</p></div>
+          <div class="broth-column"><span class="broth-mark broth-icon broth-icon-4" aria-hidden="true"></span><h3>昆<br />布<br />清<br />汤</h3><p>清爽、鲜味突出</p></div>
+        </aside>
+      </section>
+
+      <section class="flavor-section section-dark" id="flavor" aria-labelledby="flavor-title">
+        <div class="section-heading"><span class="section-kicker">一番町的坚持</span><h2 id="flavor-title">招牌风味</h2></div>
+        <div class="flavor-grid">
+          <article class="flavor-card"><img class="flavor-photo" src="./assets/flavor-broth-photo.png" alt="开放式厨房中慢火熬制的拉面汤底" /><h3>现熬汤底</h3><p>每日分锅熬制，长时间慢火炖煮，呈现浓厚与层次感。</p></article>
+          <article class="flavor-card"><img class="flavor-photo" src="./assets/flavor-noodle-photo.png" alt="筷子提起的手工拉面" /><h3>手工面</h3><p>根据汤底调整面条粗细，让每一口都挂住汤汁。</p></article>
+          <article class="flavor-card"><img class="flavor-photo" src="./assets/flavor-prep-photo.png" alt="当天准备的拉面食材" /><h3>每日备料</h3><p>精选优质食材，用心处理，温度与本味都刚好。</p></article>
+        </div>
+      </section>
+
+      <section class="rhythm-section section-dark" aria-labelledby="rhythm-title">
+        <div class="section-heading rhythm-heading"><span class="section-kicker">日常的一番町</span><h2 id="rhythm-title">一碗面，从厨房到餐桌</h2></div>
+        <div class="photo-grid">
+          <figure class="photo photo-tall"><img class="zoomable" src="./assets/ramen-spicy-miso.png" alt="带有赤辛辣油和叉烧的味噌汤拉面" loading="lazy" /></figure>
+          <figure class="photo photo-wide"><img class="zoomable" src="./assets/ramen-shoyu-tonkotsu.png" alt="盛有叉烧和溏心蛋的酱油豚骨拉面" loading="lazy" /></figure>
+          <figure class="photo photo-square"><img class="zoomable" src="./assets/ramen-yuzu-chicken.png" alt="盛有柚子和鸡叉烧的鸡白汤拉面" loading="lazy" /></figure>
+          <figure class="photo photo-square"><img class="zoomable" src="./assets/ramen-black-garlic.png" alt="黑蒜油点缀的昆布清汤拉面" loading="lazy" /></figure>
+          <figure class="photo photo-wide photo-bottom"><img class="zoomable" src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=1200&q=88" alt="厨师在开放式操作台上炙烧叉烧" loading="lazy" /></figure>
+          <figure class="photo photo-portrait"><img class="zoomable" src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=88" alt="一番町拉面店内整洁的木质吧台座位" loading="lazy" /></figure>
+          <figure class="photo photo-small"><img class="zoomable" src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=700&q=88" alt="当天准备的手工面条和新鲜配菜" loading="lazy" /></figure>
+          <figure class="photo photo-small"><img class="zoomable" src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=700&q=88" alt="顾客在暖色灯光下享用一番町拉面" loading="lazy" /></figure>
+          <figure class="photo photo-storefront"><img class="zoomable" src="./assets/story-interior.png" alt="一番町拉面温暖的木质吧台与店面环境" loading="lazy" /></figure>
+        </div>
+      </section>
+
+      <section class="story-section section-dark" id="story" aria-labelledby="story-title">
+        <div class="story-image"><img class="zoomable" src="./assets/story-interior.png" alt="一番町拉面店温暖整洁的木质吧台和门店故事空间" loading="lazy" /></div>
+        <div class="story-copy"><span class="section-kicker">从一碗面开始</span><h2 id="story-title">我们的故事</h2><p>一番町拉面，诞生于对一碗好拉面的执着。我们相信，拉面不只是填饱肚子，更是一种在日常中给自己力量的温暖。</p><p>从汤头熬制到一碗端上来，每一步我们都用心，只为让你满意地吃完这一碗面。</p></div>
+      </section>
+
+      <section class="store-section section-dark" id="store" aria-labelledby="store-title">
+        <div class="section-heading"><span class="section-kicker">杭州门店</span><h2 id="store-title">来店信息</h2></div>
+        <div class="store-grid">
+          <div class="store-detail"><span class="detail-label">地址</span><p>杭州市拱墅区潮鸣路 16 号<br /><small>（演示用地址，靠近潮鸣地铁站）</small></p><span class="detail-label">电话</span><p>0571-8888 2026</p></div>
+          <div class="store-detail"><span class="detail-label">营业时间</span><p>周二至周日<br />11:00–14:00 / 17:00–22:30</p><p>周一午间休息，17:00 开始晚市</p><a class="button button-primary" href="#store">杭州门店 <span aria-hidden="true">→</span></a></div>
+          <div class="store-map" role="img" aria-label="一番町拉面杭州门店位置示意"><span class="map-pin" aria-hidden="true">●</span><strong>一番町拉面</strong><small>潮鸣路 16 号</small></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-dark">
+      <a class="brand-lockup" href="#top" aria-label="返回一番町拉面首页"><img src="./assets/ichibancho-logo.png" alt="一番町拉面 ICHIBANCHO RAMEN Logo" /></a>
+      <div class="footer-links"><a href="#menu">菜单</a><a href="#flavor">招牌风味</a><a href="#story">门店故事</a><a href="#store">杭州门店</a></div>
+      <p>© 2026 ICHIBANCHO RAMEN. All rights reserved.</p>
+    </footer>
+    <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" type="button" aria-label="关闭图片预览">×</button><img id="lightbox-image" alt="" /><p id="lightbox-caption"></p></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script>window._AMapSecurityConfig = { securityJsCode: "a66415fee93a2d2d8c1c829387ce716e" };</script>
+    <script src="https://webapi.amap.com/maps?v=2.0&key=6ed409c7763592030ff214e0a36c146d"></script>
+    <script src="./script.js?v=20260730-7"></script>
+  </body>
+</html>
+
