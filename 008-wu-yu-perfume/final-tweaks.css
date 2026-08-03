@@ -1,0 +1,391 @@
+/* Final ordering layer: section names are the primary module titles. */
+.section-heading > .eyebrow {
+  font-size: 56px;
+  line-height: 1.12;
+}
+
+.section-heading h2,
+#story .section-heading h2 {
+  font-size: 28px;
+  line-height: 1.45;
+}
+
+.detail-panel .image-frame img,
+.purchase-card .image-frame img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Latest annotation pass: tighter module scale and unified story labels. */
+.section-heading > .eyebrow {
+  font-size: 42px;
+}
+
+.section-heading h2,
+#story .section-heading h2 {
+  font-size: 26px;
+}
+
+#story .story-grid > article .eyebrow,
+#story .story-grid > article:nth-of-type(1) .eyebrow,
+#story .story-grid > article:nth-of-type(2) .eyebrow,
+#story .story-grid > article:nth-of-type(3) .eyebrow {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.stepper button,
+.stepper button:focus-visible,
+.stepper output {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .section-heading > .eyebrow {
+    font-size: 32px;
+  }
+
+  .section-heading h2,
+  #story .section-heading h2 {
+    font-size: 20px;
+  }
+}
+
+/* Full-height desktop Hero and reliable anchor destinations. */
+section[id] {
+  scroll-margin-top: 110px;
+}
+
+@media (min-width: 761px) {
+  .hero {
+    min-height: calc(100vh - 92px);
+  }
+}
+
+.hero-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 760px) {
+  section[id] {
+    scroll-margin-top: 82px;
+  }
+
+  .hero-image {
+    aspect-ratio: 9 / 16;
+  }
+
+  .hero-image picture,
+  .hero-image picture img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image picture img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .menu-button,
+  .menu-button:focus-visible {
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .hero .text-link {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  #story .story-grid > figure:nth-of-type(2) {
+    order: 3;
+  }
+
+  #story .story-grid > article:nth-of-type(2) {
+    order: 4;
+  }
+
+  .note-card,
+  .note-card > .note-visual,
+  .note-card > div:not(.note-visual) {
+    grid-template-columns: 1fr;
+  }
+
+  .note-card {
+    height: auto;
+  }
+
+  .note-card > .note-visual {
+    grid-column: 1;
+    grid-row: 1;
+    height: 155px;
+  }
+
+  .note-card > div:not(.note-visual) {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 18px 20px 20px;
+  }
+}
+
+/* Note-card metadata: one shared scale for all three scent stages. */
+.note-card > div:not(.note-visual) .eyebrow {
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* Sampling is a guided path rather than three isolated cards. */
+.sampling-grid {
+  position: relative;
+  overflow: visible;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.sampling-grid::before {
+  content: "";
+  position: absolute;
+  top: 49px;
+  left: 16.7%;
+  right: 16.7%;
+  height: 1px;
+  background: var(--line);
+}
+
+.sampling-grid article {
+  position: relative;
+  z-index: 1;
+  padding: 26px 30px 24px;
+  border: 0;
+  background: var(--paper-hi);
+}
+
+.sampling-grid article:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.sampling-grid article:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.sampling-grid span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 0 18px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper-hi);
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.sampling-grid h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .note-card > div:not(.note-visual) .eyebrow {
+    font-size: 12px;
+  }
+
+  .sampling-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .sampling-grid::before {
+    top: 46px;
+    bottom: 46px;
+    left: 24px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .sampling-grid article,
+  .sampling-grid article:first-child,
+  .sampling-grid article:last-child {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    column-gap: 18px;
+    align-items: start;
+    padding: 21px 20px;
+    border-radius: 0;
+  }
+
+  .sampling-grid article:first-child {
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .sampling-grid article:last-child {
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+
+  .sampling-grid span {
+    grid-row: span 2;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+  }
+
+  .sampling-grid h3,
+  .sampling-grid p {
+    grid-column: 2;
+  }
+}
+
+/* Unified note-image labels and a tighter editorial rhythm. */
+.note-card > .note-visual {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.note-card > .note-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.note-card > .note-visual span {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: var(--ink);
+  font: 600 34px/1.15 var(--serif);
+  letter-spacing: .12em;
+  text-shadow: 0 1px 12px rgba(250,248,243,.72);
+}
+
+main > .section {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+
+main > .section .section-heading {
+  margin-bottom: 32px;
+}
+
+main > .purchase {
+  padding-top: 64px;
+  padding-bottom: 76px;
+}
+
+@media (max-width: 760px) {
+  .note-card > .note-visual span {
+    left: 50%;
+    font-size: 25px;
+  }
+
+  main > .section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+/* Mobile scent cards use one calm, repeated image-then-copy rhythm. */
+@media (max-width: 760px) {
+  .note-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 155px auto;
+    height: auto;
+  }
+
+  .note-card > .note-visual {
+    grid-column: 1;
+    grid-row: 1;
+    height: 155px;
+  }
+
+  .note-card > div:not(.note-visual) {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 18px 20px 20px;
+  }
+}
+
+/* Mobile Hero: keep the purchase decision inside the image, while secondary copy follows it. */
+.hero-image-summary {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .hero-image {
+    position: relative;
+  }
+
+  .hero-image::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 54%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgba(11, 25, 21, .86));
+  }
+
+  .hero-image-summary {
+    position: absolute;
+    z-index: 1;
+    inset: auto 0 0;
+    display: grid;
+    gap: 10px;
+    padding: 22px 20px 20px;
+    color: #fff;
+  }
+
+  .hero-image-title {
+    margin: 0;
+    color: #fff;
+    font: 600 34px/1.15 var(--serif);
+    letter-spacing: .12em;
+  }
+
+  .hero-image-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, .9);
+    font: 15px/1.4 Georgia, serif;
+  }
+
+  .hero-image-meta strong {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .hero-image-summary .button {
+    width: max-content;
+    min-height: 42px;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, .45);
+    background: rgba(18, 58, 48, .82);
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-copy > h1,
+  .hero-copy > .button-primary,
+  .hero-copy > .product-meta > span:nth-child(2),
+  .hero-copy > .product-meta > strong {
+    display: none;
+  }
+
+  .hero-copy > .product-meta {
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+}

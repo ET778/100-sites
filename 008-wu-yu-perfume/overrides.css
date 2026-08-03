@@ -1,0 +1,272 @@
+/* Annotation pass: scale navigation without changing header dimensions. */
+.site-header .brand {
+  width: 104px;
+  height: 66px;
+}
+
+.site-header .site-nav {
+  gap: 42px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* The regenerated 3:2 campaign image now matches the hero frame exactly. */
+.hero {
+  min-height: 610px;
+}
+
+.hero-image {
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.hero-image img {
+  object-fit: cover;
+}
+
+.hero .eyebrow {
+  font-size: 14px;
+  letter-spacing: .18em;
+}
+
+.hero .text-link {
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Make the buying CTA share the exact hero primary-action treatment. */
+.bag-button {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.bag-button:hover,
+.bag-button:focus-visible {
+  background: #17352d;
+}
+
+/* Increase section hierarchy, while keeping product-card typography distinct. */
+.section-heading h2 {
+  font-size: 40px;
+}
+
+.story-copy h3 {
+  font-size: 35px;
+  line-height: 1.35;
+}
+
+@media (max-width: 760px) {
+  .site-header .brand {
+    width: 68px;
+    height: 48px;
+  }
+
+  .hero-image {
+    aspect-ratio: 3 / 2;
+  }
+
+  .hero .eyebrow,
+  .hero .text-link {
+    font-size: 13px;
+  }
+
+  .section-heading h2 {
+    font-size: 29px;
+  }
+
+  .story-copy h3 {
+    font-size: 28px;
+  }
+}
+
+/* Final pass over the complete annotation list. */
+.site-nav .nav-buy {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 5px;
+  background: var(--ink);
+  color: #fff;
+}
+
+.site-nav .nav-buy:hover,
+.site-nav .nav-buy:focus-visible {
+  background: #17352d;
+  border-color: transparent;
+}
+
+.section-heading > .eyebrow {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  line-height: 1.2;
+}
+
+.section-heading h2,
+#story .section-heading h2 {
+  font-size: 26px;
+  color: #5d6e67;
+  font-weight: 500;
+}
+
+.section-heading > p:last-child {
+  font-size: 15px;
+}
+
+#story .story-grid > article:nth-of-type(1) .eyebrow,
+#story .story-grid > article:nth-of-type(1) p:last-child {
+  font-size: 22px;
+  line-height: 1.9;
+}
+
+#story .story-grid > article:nth-of-type(2) .eyebrow,
+#story .story-grid > article:nth-of-type(3) .eyebrow {
+  font-size: 17px;
+}
+
+#story .story-grid > article:nth-of-type(2) p:last-child,
+#story .story-grid > article:nth-of-type(3) p:last-child {
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+.hero-zoom {
+  cursor: zoom-in;
+}
+
+.hero-zoom:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 5px;
+}
+
+.image-zoom-dialog {
+  width: min(94vw, 1400px);
+  max-width: none;
+  padding: 18px;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(20, 31, 27, .96);
+}
+
+.image-zoom-dialog::backdrop {
+  background: rgba(15, 24, 21, .74);
+}
+
+.image-zoom-dialog img {
+  display: block;
+  width: 100%;
+  max-height: 82vh;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-zoom-dialog button {
+  display: block;
+  margin: 12px 0 0 auto;
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.detail-panel .image-frame,
+.purchase-card .image-frame {
+  background: #e6e4dc;
+}
+
+.detail-panel .image-frame img,
+.purchase-card .image-frame img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 760px) {
+  .site-nav .nav-buy {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 6px;
+    width: max-content;
+  }
+
+  .section-heading > .eyebrow {
+    font-size: 34px;
+  }
+
+  .section-heading h2,
+  #story .section-heading h2 {
+    font-size: 20px;
+  }
+
+  #story .story-grid > article:nth-of-type(1) .eyebrow,
+  #story .story-grid > article:nth-of-type(1) p:last-child {
+    font-size: 17px;
+  }
+
+  #story .story-grid > article:nth-of-type(2) p:last-child,
+  #story .story-grid > article:nth-of-type(3) p:last-child {
+    font-size: 16px;
+  }
+}
+
+/* Purchase-stepper cleanup requested in the latest annotation pass. */
+.stepper output {
+  border-inline: 0;
+}
+
+.bag-button,
+.bag-button:focus-visible {
+  border: 0;
+  box-shadow: none;
+  outline: 0;
+}
+
+/* Follow-up annotation pass: retain the header frame while strengthening key hierarchy. */
+.site-header .brand {
+  width: 126px;
+  height: 82px;
+}
+
+.site-header .site-nav {
+  font-size: 16px;
+}
+
+.hero h1 {
+  font-size: 68px;
+}
+
+.hero .text-link {
+  color: var(--ink);
+  border-color: var(--ink);
+  font-weight: 600;
+}
+
+#story .section-heading h2 {
+  font-size: 46px;
+}
+
+@media (max-width: 760px) {
+  .site-header .brand {
+    width: 76px;
+    height: 54px;
+  }
+
+  .site-header .site-nav {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  #story .section-heading h2 {
+    font-size: 32px;
+  }
+}
